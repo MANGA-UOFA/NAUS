@@ -1,11 +1,11 @@
 Non-Autoregressive Unsupervised Summarizer (NAUS)
 =======
-This repo contains the code for our ACL 2022 paper [Learning Non-Autoregressive Models from Search for Unsupervised Sentence Summarization]([https://openreview.net/forum?id=UNzc8gReN7m](https://aclanthology.org/2022.acl-long.545)).
+This repo contains the code for our ACL 2022 paper [Learning Non-Autoregressive Models from Search for Unsupervised Sentence Summarization](https://aclanthology.org/2022.acl-long.545).
 
 ## Additional Results: Supervised Summarization
 
 <div align="center">
-	Table1. Model performance on the Gigaword headline generation test dataset under the supervised setting
+	Table1. Model performance on the Gigaword headline generation test dataset in the supervised setting
 	
 <table>
 	<tr>
