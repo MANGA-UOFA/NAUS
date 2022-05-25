@@ -1,6 +1,121 @@
 Non-Autoregressive Unsupervised Summarizer (NAUS)
 =======
-This repo contains the code for our ACL 2020 paper [Learning Non-Autoregressive Models from Search for Unsupervised Sentence Summarization](https://openreview.net/forum?id=UNzc8gReN7m).
+This repo contains the code for our ACL 2022 paper [Learning Non-Autoregressive Models from Search for Unsupervised Sentence Summarization](https://openreview.net/forum?id=UNzc8gReN7m).
+
+Additional Results: Supervised Summarization
+=======
+
+
+<div align="center">
+	Table1. Model performance on the Gigaword headline generation test dataset under the supervised setting
+	
+<table>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;Models</td>
+		<td>Parameters</td>
+		<td>Row #</td>
+		<td>Rouge-1</td>
+		<td>Rouge-2</td>
+		<td>Rouge-L</td>
+		<td>Avg Rouge</td>
+		<td>Len</td>
+	</tr>
+	<tr>
+		<td rowspan="8"><a href=https://github.com/yxuansu/NAG-BERT>&nbsp;NAG-BERT</a></td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.2</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+		<td>&nbsp;&nbsp;29.05</td>
+		<td>&nbsp;&nbsp;12.69</td>
+		<td>&nbsp;&nbsp;27.52</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;23.09</td>
+		<td>6.2</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.3</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+		<td>&nbsp;&nbsp;30.05</td>
+		<td>&nbsp;&nbsp;13.80</td>
+		<td>&nbsp;&nbsp;28.87</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;24.24</td>
+		<td>6.6</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.4</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+		<td>&nbsp;&nbsp;30.47</td>
+		<td>&nbsp;&nbsp;13.58</td>
+		<td>&nbsp;&nbsp;28.81</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;24.29</td>
+		<td>6.7</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;4</td>
+		<td>&nbsp;&nbsp;30.41</td>
+		<td>&nbsp;&nbsp;13.53</td>
+		<td>&nbsp;&nbsp;28.63</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;24.19</td>
+		<td>6.7</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.6</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;5</td>
+		<td>&nbsp;&nbsp;30.61</td>
+		<td>&nbsp;&nbsp;13.55</td>
+		<td>&nbsp;&nbsp;28.97</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;24.38</td>
+		<td>6.8</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.7</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;6</td>
+		<td>&nbsp;&nbsp;30.30</td>
+		<td>&nbsp;&nbsp;13.59</td>
+		<td>&nbsp;&nbsp;28.67</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;24.19</td>
+		<td>6.8</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.8</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;7</td>
+		<td>&nbsp;&nbsp;30.21</td>
+		<td>&nbsp;&nbsp;13.05</td>
+		<td>&nbsp;&nbsp;28.59</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;23.95</td>
+		<td>6.8</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.9</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;8</td>
+		<td>&nbsp;&nbsp;30.57</td>
+		<td>&nbsp;&nbsp;13.64</td>
+		<td>&nbsp;&nbsp;28.99</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;24.40</td>
+		<td>6.8</td>
+	</tr>
+	<tr>
+		<td rowspan="2">&nbsp;NAUS+LC</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.23</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;9</td>
+		<td>&nbsp;&nbsp;33.73</td>
+		<td>&nbsp;&nbsp;13.26</td>
+		<td>&nbsp;&nbsp;31.68</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;26.22</td>
+		<td>6.4</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.24</td>
+		<td>&nbsp;&nbsp;&nbsp;10</td>
+		<td>&nbsp;&nbsp;<b>34.56</b></td>
+		<td>&nbsp;&nbsp;<b>14.10</b></td>
+		<td>&nbsp;&nbsp;<b>32.45</b></td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;<b>27.04</b></td>
+		<td>6.8</td>
+	</tr>
+
+</table>
+
+</div>
 
 
 ## Environment setup
