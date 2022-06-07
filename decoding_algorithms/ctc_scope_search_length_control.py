@@ -280,7 +280,7 @@ class CTCScopeSearchLengthControlDecoder(CTCDecoderBase):
         # Determine the desired summary length
         if self.use_length_ratio:
             # If the desired length is proportional to the input length, set desired length based on the input
-            self.sample_desired_length = int(np.floor(0.01 * self.desired_length * source_length))
+            self.sample_desired_length = max(int(np.floor(0.01 * self.desired_length * source_length)), 2)
         else:
             # Otherwise, use the given length
             self.sample_desired_length = self.desired_length + 1  # Handle 0-length summary
@@ -348,10 +348,11 @@ class CTCScopeSearchLengthControlDecoder(CTCDecoderBase):
         """
         if output_logits.dtype != torch.float16:
             output_logits = output_logits.cpu()  # Move everything to CPU for fair comparison (cpu decoding)
+            source_length = source_length.cpu()
         self.dtype = output_logits.dtype
         self.device = output_logits.device
         decoded_summary_list = []
         for i in range(0, len(output_logits)):
-            decoded_summary = self.ctc_scope_search_length_control(output_logits[i], source_length)
+            decoded_summary = self.ctc_scope_search_length_control(output_logits[i], source_length[i])
             decoded_summary_list.append(decoded_summary)
         return decoded_summary_list

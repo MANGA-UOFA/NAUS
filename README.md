@@ -182,6 +182,8 @@ When ```decoding_algorithm``` is  ```ctc_beam_search_length_control```, the mode
 **force_length**: (Optional) This parameter is only useful when ```decoding_algorithm``` is set to ```ctc_beam_search_length_control```.
 For ```ctc_beam_search_length_control```, the parameter determines whether to force the length of the generated summaries to be ```desired_length```. If ```force_length``` is set to ```False```, the model returns the greedily decoded summary if the summary length does not exceed ```desired_length```. Otherwise, the model search for the (approximately) most probable summary of the ```desired_length``` with a [length control](https://openreview.net/forum?id=UNzc8gReN7m) algorithm. 
 
+**use_length_ratio**: (Optional) This parameter controls whether the desired summary length depends on the length of source sentences. When this parameter is set to True, the actual desired length becomes ```round(0.01*desired_length*source_lenght)```. In other words, the ```the desired_length``` becomes the desired length ratio relative to the source sentence. 
+
 **beam_size**: (Optional) Beam size for the decoding algorithm, only useful when ```decoding_algorithm``` is set to ```ctc_beam_search``` or ```ctc_beam_search_length_control```.
 
 **valid_subset**: (Optional) Names of the validation dataset, separating by comma, e.g, test,valid.
