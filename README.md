@@ -139,7 +139,8 @@ pip install -e.
 ```
 
 ## Data downloading
-The [search-based](https://aclanthology.org/2020.acl-main.452.pdf) summaries on the Gigaword dataset and pre-trained model weights can be found in this publically available [Google drive folder](https://drive.google.com/drive/folders/1XKN6oFy2-C6ChkfjUVIJHXFCqTVF9vjo), which can be automatically downloaded and organized with the following commands. 
+The [search-based](https://aclanthology.org/2020.acl-main.452.pdf) summaries on the Gigaword dataset and pre-trained model weights can be found in this publically available [Google drive folder](https://drive.google.com/drive/folders/1Gc2vRMscoP111xMhAJozfCdcr5cuPJQQ), which can be automatically downloaded and organized with the following commands. 
+If the downloading script doesn't work properly, download and unzip the data manually.
 
 ```
 chmod +x download_data.sh
